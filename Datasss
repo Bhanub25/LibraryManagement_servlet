@@ -1,0 +1,18 @@
+CREATE TABLE Author_Tbl (
+    Author_code NUMBER(5) PRIMARY KEY,
+    Author_name VARCHAR2(20) NOT NULL,
+    contact_no NUMBER(11)
+);
+
+INSERT INTO Author_Tbl VALUES (1, 'RobinSharma', 88000799224);
+INSERT INTO Author_Tbl VALUES (2, 'R.K.Narayan', 88000799224);
+INSERT INTO Author_Tbl VALUES (3, 'Paulo Coelho', 88000799224);
+
+
+CREATE TABLE Book_Tbl(
+ISBN varchar2(10) PRIMARY KEY,
+Book_title Varchar2(20) Not null,
+Book_type Char(1),
+//(should accepct only G or T G-general,T-Technical)
+Author_code Number(5),//Not null and the values used here should be prsent in the Author_Tbl)
+Book_cost Number(8,2) Not null);
